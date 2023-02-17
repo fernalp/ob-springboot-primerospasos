@@ -1,5 +1,7 @@
 package com.caldatam.obrestdatajpa;
 
+import com.caldatam.obrestdatajpa.entities.Book;
+import com.caldatam.obrestdatajpa.repository.BookRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -31,7 +33,7 @@ public class ObRestDatajpaApplication {
 
 		//4. Borrar un libro
 
-		bookRepository.deleteById(1L);
+		//bookRepository.deleteById(1L);
 
 		System.out.println("El número de libros es:" + bookRepository.findAll().size());
 	}

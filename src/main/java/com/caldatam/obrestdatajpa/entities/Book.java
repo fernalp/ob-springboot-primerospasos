@@ -1,4 +1,4 @@
-package com.caldatam.obrestdatajpa;
+package com.caldatam.obrestdatajpa.entities;
 
 import jakarta.persistence.*;
 

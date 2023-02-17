@@ -1,5 +1,6 @@
-package com.caldatam.obrestdatajpa;
+package com.caldatam.obrestdatajpa.repository;
 
+import com.caldatam.obrestdatajpa.entities.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
