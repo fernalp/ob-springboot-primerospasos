@@ -2,6 +2,9 @@ package com.caldatam.obrestdatajpa.controller;
 
 import com.caldatam.obrestdatajpa.entities.Book;
 import com.caldatam.obrestdatajpa.repository.BookRepository;
+import io.swagger.v3.oas.annotations.Hidden;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -32,6 +35,7 @@ public class BookController {
      * @return List<Book>
      */
     @GetMapping("/api/books")
+    @Operation(summary = "Llama a todos los libros de la base", description = "Retorna todos los libros que hay en BD")
     public List<Book> findAll(){
         return bookRepository.findAll();
     }
@@ -39,7 +43,8 @@ public class BookController {
     //Buscar un libro por su id en la base de datos
 
     @GetMapping("/api/books/{id}")
-    public ResponseEntity<Book> findOneById(@PathVariable Long id){
+    @Operation(summary = "Llama un libro por el id", description = "Retorna el libro con el id y si no encuentra el libro returna un not found")
+    public ResponseEntity<Book> findOneById(@Parameter(description = "Clave Primaria tipo Long") @PathVariable Long id){
         Optional<Book> optionalBook = bookRepository.findById(id);
 
         //Opcion 1
@@ -96,6 +101,7 @@ public class BookController {
     }
 
     //Borrar todos los libros
+    @Hidden
     @DeleteMapping("/api/books")
     public ResponseEntity<Book> deleteAll(){
         if (bookRepository.count() > 0){

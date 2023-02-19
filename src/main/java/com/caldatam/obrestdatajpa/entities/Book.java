@@ -1,21 +1,26 @@
 package com.caldatam.obrestdatajpa.entities;
 
+
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "books")
+@Schema(name = "Libro", description = "Entidad libro que representar un libro")
 public class Book {
 
     //1. Atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(description = "Clave primaria autogenerada por la base de datos")
     private Long id;
     private String isbn;
     private String title;
     private String author;
     private Integer pages;
+    @Schema(description = "Precio en doláres con 2 cifras decimales")
     private Double precio;
     private LocalDate releaseDate;
     private Boolean online;
