@@ -21,7 +21,7 @@ public class Book {
     private String author;
     private Integer pages;
     @Schema(description = "Precio en doláres con 2 cifras decimales")
-    private Double precio;
+    private Double price;
     private LocalDate releaseDate;
     private Boolean online;
 
@@ -29,13 +29,13 @@ public class Book {
     public Book() {
     }
 
-    public Book(Long id, String isbn, String title, String author, Integer pages, Double precio, LocalDate releaseDate, Boolean online) {
+    public Book(Long id, String isbn, String title, String author, Integer pages, Double price, LocalDate releaseDate, Boolean online) {
         this.id = id;
         this.isbn = isbn;
         this.title = title;
         this.author = author;
         this.pages = pages;
-        this.precio = precio;
+        this.price = price;
         this.releaseDate = releaseDate;
         this.online = online;
     }
@@ -83,12 +83,12 @@ public class Book {
         this.pages = pages;
     }
 
-    public Double getPrecio() {
-        return precio;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setPrecio(Double precio) {
-        this.precio = precio;
+    public void setPrice(Double precio) {
+        this.price = precio;
     }
 
     public LocalDate getReleaseDate() {
@@ -118,7 +118,7 @@ public class Book {
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", pages=" + pages +
-                ", precio=" + precio +
+                ", precio=" + price +
                 ", releaseDate=" + releaseDate +
                 ", online=" + online +
                 '}';
