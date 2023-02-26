@@ -1,7 +1,7 @@
 package com.example.obspringsecuritycifrado;
 
-import com.example.obspringsecuritycifrado.entities.User;
-import com.example.obspringsecuritycifrado.repository.UserRepository;
+import com.example.obspringsecuritycifrado.entities.Usuario;
+import com.example.obspringsecuritycifrado.repository.UsuarioRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -19,12 +19,12 @@ public class ObSpringSecurityCifradoApplication {
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(ObSpringSecurityCifradoApplication.class, args);
-        UserRepository repository = context.getBean(UserRepository.class);
+        UsuarioRepository repository = context.getBean(UsuarioRepository.class);
 
         PasswordEncoder encoder = context.getBean(PasswordEncoder.class);
 
-        User user = new User(null, "usuario", encoder.encode("admin"));
-        repository.save(user);
+        Usuario usuario = new Usuario(null, "fernando", encoder.encode("admin"));
+        repository.save(usuario);
 
     }
 

@@ -1,11 +1,11 @@
 package com.example.obspringsecuritycifrado.repository;
 
-import com.example.obspringsecuritycifrado.entities.User;
+import com.example.obspringsecuritycifrado.entities.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer> {
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 }
 
 

@@ -3,27 +3,27 @@ package com.example.obspringsecuritycifrado.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "ob_user")
-public class User {
+@Table(name = "ob_users")
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private String username;
     private String password;
-    public User(){}
+    public Usuario(){}
 
-    public User(Integer id, String username, String password) {
+    public Usuario(Long id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
