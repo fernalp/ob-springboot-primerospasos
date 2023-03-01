@@ -3,10 +3,10 @@
 ## 1. Fase Análisis
 
 * [x] Actividades de proyecto 1
-  * [x] 
+  * [x] Actividade tal 
 
 * [x] Actividades de proyecto 2
-  *
+  * [ ] Actividad tal
 
 ## 2. Fase Planeación
 
