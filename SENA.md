@@ -3,9 +3,9 @@
 ## 1. Fase Análisis
 
 * [x] Actividades de proyecto 1
-  * [ ] 
+  * [x] 
 
-* [ ] Actividades de proyecto 2
+* [x] Actividades de proyecto 2
   *
 
 ## 2. Fase Planeación
